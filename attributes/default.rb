@@ -53,6 +53,11 @@ default.influxdb.config = Mash.new ({
       'database' => 'graphite',
       'udp_enabled' => false
     },
+    'collectd' => {
+      'enabbled' => false,
+      'port' => 25826,
+      'database' => 'collectd'
+    },
     'udp' => {
       'enabled' => false
     },

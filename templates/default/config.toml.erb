@@ -45,6 +45,15 @@ read-timeout = "<%= @config['api']['read-timeout'] %>"
   database = "<%= @config['input_plugins']['graphite']['database'] %>"  # store graphite data in this database
   udp_enabled = <%= @config['input_plugins']['graphite']['udp_enabled'] %> # enable udp interface on the same port as the tcp interface
 
+  # Configure the collectd api
+  [input_plugins.collectd]
+  enabled = <%= @config['input_plugins']['collectd']['enabled'] %>
+  # address = "0.0.0.0" # If not set, is actually set to bind-address.
+  port = <%= node['input_plugins']['collectd']['port'] %>
+  database = "<%= node['input_plugins']['collectd']['database'] %>"
+  # types.db can be found in a collectd installation or on github:
+  # https://github.com/collectd/collectd/blob/master/src/types.db
+  # typesdb = "/usr/share/collectd/types.db" # The path to the collectd types.db file
   # Configure the udp api
   [input_plugins.udp]
   enabled = <%= @config['input_plugins']['udp']['enabled'] %>
