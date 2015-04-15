@@ -49,8 +49,8 @@ read-timeout = "<%= @config['api']['read-timeout'] %>"
   [input_plugins.collectd]
   enabled = <%= @config['input_plugins']['collectd']['enabled'] %>
   # address = "0.0.0.0" # If not set, is actually set to bind-address.
-  port = <%= node['input_plugins']['collectd']['port'] %>
-  database = "<%= node['input_plugins']['collectd']['database'] %>"
+  port = <%= @config['input_plugins']['collectd']['port'] %>
+  database = "<%= @config['input_plugins']['collectd']['database'] %>"
   # types.db can be found in a collectd installation or on github:
   # https://github.com/collectd/collectd/blob/master/src/types.db
   # typesdb = "/usr/share/collectd/types.db" # The path to the collectd types.db file

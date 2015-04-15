@@ -54,7 +54,7 @@ default.influxdb.config = Mash.new ({
       'udp_enabled' => false
     },
     'collectd' => {
-      'enabbled' => false,
+      'enabled' => false,
       'port' => 25826,
       'database' => 'collectd'
     },
